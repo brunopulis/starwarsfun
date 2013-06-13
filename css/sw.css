@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'STARWARS';
+  src: url('../font/STARWARS.eot');
+  src: url('../font/STARWARS.eot?#iefix') format('embedded-opentype'),
+       url('../font/STARWARS.woff') format('woff'),
+       url('../font/STARWARS.ttf') format('truetype'),
+       url('../font/STARWARS.svg#STARWARS') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+p  {
+  font: bold 45px/1.5 'STARWARS', Arial, Helvetica, sans-serif;
+  color: #fff;   
+}
+
+.daddy-vader {
+  float: right;
+  position: relative; 
+}      
+
+/* 
+Parallax Experiment
+Date: 2nd April 2009
+Author: Paul Hayes
+
+Adaptacao por: Bruno Pulis
+*/
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/backgrounds/foreground.png') 5% 5%,
+              url('../img/backgrounds/midground.png') 20% 20%,
+              url('../img/backgrounds/background.png') 90% 110%;
+  
+  -webkit-transition: left 300s linear;
+     -moz-transition: left 300s linear;
+     -ms-transition: left 300s linear;
+      -o-transition: left 300s linear; 
+         transition: left 300s linear;
+}
+
+#experiment:target #background { left: -5000px;}
+#experiment:hover  #background { left: -9999px; }
+
+.content {
+  width: 990px;
+  margin: 3em 10em;
+  padding: 3em;
+  position: fixed;
+}
+
+.content-footer {
+   margin: 3em 10em;
+   opacity: 0.95;
+   color: #ccc;
+   padding: 3em;
+   position: fixed;
+}
+.content h2 { margin: 1em 0; }
+
+footer {
+   bottom: 0;
+   position: relative;
+}
+
+audio {
+  position: absolute;
+  bottom: 50px;
+  left: 200px;
+}
